@@ -114,7 +114,7 @@ public class Task extends BaseDriver {
         WebElement telephoneNumber = driver.findElement(By.id("edit-phone-work"));
         long random = ThreadLocalRandom.current().nextLong(10000000000L, 100000000000L);
         String telephoneNo = String.valueOf(random);
-        telephoneNumber.sendKeys(telephoneNo);
+        telephoneNumber.sendKeys(telephoneNo+Keys.ENTER);
 
         //17-Take a screenshot
         LocalDateTime localDateTime = LocalDateTime.now();
