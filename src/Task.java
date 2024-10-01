@@ -155,7 +155,7 @@ public class Task extends BaseDriver {
         }
 
         //21-Close the browser
-        driver.close();
+        driver.quit();
     }
 }
 

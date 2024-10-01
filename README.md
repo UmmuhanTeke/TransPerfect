@@ -1,13 +1,9 @@
-## TRANSPERFECT TESTİNG PROJECT
+## TRANSPERFECT
 ### *TransPerfect is the go-to site for professional translations in over 170 languages, provided by native experts for businesses across various sectors, including retail, travel, financial services, and life sciences.*
 ## Table of Contents
-- [Project Overview](#project-overview)
 - [Technologies and Tools Used](#technologies-and-tools-used)
 - [Prerequisites](#prerequisites)
 - [Contributor](#contributor)
-
-## Project Overview
-####  TransPerfect site I used for the project is a language platform that offers a wide range of functions. In the project, I utilized TransPerfect's translation service in over 170 languages, took advantage of the site’s personalized interest forms for individual freedom, and tested the site with various topics.
 
 #### Domain:  [transperfect.com](https://www.transperfect.com/)
 
