@@ -69,6 +69,7 @@ public class Task extends BaseDriver {
         WebElement searchIcon = driver.findElement(By.xpath("//span[@class='t-search-link']"));
         wait.until(ExpectedConditions.elementToBeClickable(searchIcon));
         MyFunc.jsClick(searchIcon);
+        Assert.assertTrue("Button inactive", searchIcon.isEnabled());
 
         //8-Enter text "translation" in the Search text... textbox
         WebElement searchText = driver.findElement(By.name("search_api_fulltext"));
@@ -101,6 +102,7 @@ public class Task extends BaseDriver {
         MyFunc.jsClick(translationClick);
         WebElement legalClick = driver.findElement(By.id("edit-your-interests-legal"));
         MyFunc.jsClick(legalClick);
+        Assert.assertTrue("Button inactive", translationClick.isEnabled());
 
         //15-Enter text into First Name text box
         WebElement firstName = driver.findElement(By.id("edit-first-name"));
