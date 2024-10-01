@@ -16,17 +16,17 @@
 ### The following steps were evaluated in this project:
 * Click on 'Industries' in the top navigation bar, then select 'Retail & E-commerce.
 * Scroll down/move the screen until Client Stories are visible.
-* Click on the search engine icon in the top navigation bar
+* Click on the search engine icon in the top navigation bar.
 * Enter 'translation' into the search bar and delete it, then type 'quote' and press enter.
-* Click on Request a Free Quote
-* Hover the mouse button over Website Localization to cause the popup with the description to appear
-* Tick the boxes for Translation Services and Legal Services
-* Enter text into First Name text box
-* Generate a random number and enter it into Telephone text box
-* Take a screenshot 
-* Change the website language from English to Italian
-* Open the Solutions (Soluzioni) page in a new tab
-* Switch to new opened TAB
+* Click on Request a Free Quote.
+* Hover the mouse button over Website Localization to cause the popup with the description to appear.
+* Tick the boxes for Translation Services and Legal Services.
+* Enter text into First Name text box.
+* Generate a random number and enter it into Telephone text box.
+* Take a screenshot .
+* Change the website language from English to Italian.
+* Open the Solutions (Soluzioni) page in a new tab.
+* Switch to new opened TAB.
 
  ## Technologies and Tools Used
  ### The basic technologies and tools to be used in this project include:
