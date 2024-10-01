@@ -119,8 +119,8 @@ public class Task extends BaseDriver {
         DateTimeFormatter imgFormat = DateTimeFormatter.ofPattern("dd.MM.yyyy.HH.mm.ss");
 
         TakesScreenshot ts = (TakesScreenshot) driver;
-        File hafizadakiFile = ts.getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(hafizadakiFile, new File("Img\\" + localDateTime.format(imgFormat) + "screenShot.jpg"));
+        File memoryFile = ts.getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(memoryFile, new File("Img\\" + localDateTime.format(imgFormat) + "screenShot.jpg"));
 
         File fileInMemory = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         String desktop = System.getProperty("user.home") + "/Desktop";
