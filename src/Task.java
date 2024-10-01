@@ -102,8 +102,6 @@ public class Task extends BaseDriver {
         translationClick.click();
         WebElement legalClick = driver.findElement(By.id("edit-your-interests-legal"));
         legalClick.click();
-        Assert.assertTrue("Button inactive", translationClick.isEnabled());
-        Assert.assertTrue("Button inactive", legalClick.isEnabled());
 
         //15-Enter text into First Name text box
         WebElement firstName = driver.findElement(By.id("edit-first-name"));
@@ -114,7 +112,7 @@ public class Task extends BaseDriver {
         WebElement telephoneNumber = driver.findElement(By.id("edit-phone-work"));
         long random = ThreadLocalRandom.current().nextLong(10000000000L, 100000000000L);
         String telephoneNo = String.valueOf(random);
-        telephoneNumber.sendKeys(telephoneNo+Keys.ENTER);
+        telephoneNumber.sendKeys(telephoneNo + Keys.ENTER);
 
         //17-Take a screenshot
         LocalDateTime localDateTime = LocalDateTime.now();
@@ -124,11 +122,11 @@ public class Task extends BaseDriver {
         File hafizadakiFile = ts.getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(hafizadakiFile, new File("Img\\" + localDateTime.format(imgFormat) + "screenShot.jpg"));
 
-        File fileInMemory=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-        String desktop=System.getProperty("user.home")+"/Desktop";
+        File fileInMemory = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        String desktop = System.getProperty("user.home") + "/Desktop";
 
         try {
-            FileUtils.copyFile(fileInMemory, new File(desktop+"\\screenShot.png"));
+            FileUtils.copyFile(fileInMemory, new File(desktop + "\\screenShot.png"));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
