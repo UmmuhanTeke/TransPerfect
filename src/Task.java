@@ -54,7 +54,7 @@ public class Task extends BaseDriver {
         MyFunc.scrollElement(clientStories);
 
         try {
-            Thread.sleep(2 * 1000);
+            Thread.sleep(1 * 1000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
@@ -68,20 +68,20 @@ public class Task extends BaseDriver {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@class='t-search-link']")));
         WebElement searchIcon = driver.findElement(By.xpath("//span[@class='t-search-link']"));
         wait.until(ExpectedConditions.elementToBeClickable(searchIcon));
-        MyFunc.jsClick(searchIcon);
+        searchIcon.click();
         Assert.assertTrue("Button inactive", searchIcon.isEnabled());
 
         //8-Enter text "translation" in the Search text... textbox
         WebElement searchText = driver.findElement(By.name("search_api_fulltext"));
         wait.until(ExpectedConditions.elementToBeClickable(searchText));
-        MyFunc.jsClick(searchText);
+        searchText.click();
         searchText.sendKeys("translation");
 
         //9-Delete the text you just entered
         searchText.sendKeys(Keys.CONTROL + "a", Keys.DELETE);
 
         //10-Enter "quote" in the Search text... textbox
-        MyFunc.jsClick(searchText);
+        searchText.click();
         searchText.sendKeys("quote" + Keys.ENTER);
 
         //11-Wait for the "Request a Free Quote" search result to appear
@@ -90,7 +90,7 @@ public class Task extends BaseDriver {
         Assert.assertTrue("Message not displayed", requestText.isDisplayed());
 
         //12-Click on Request a Free Quote
-        MyFunc.jsClick(requestText);
+        requestText.click();
 
         //13-Hover the mouse button over Website Localization to cause the popup with the description to appear
         WebElement websiteHover = driver.findElement(By.xpath("(//div[@id='edit-your-interests']//label)[2]"));
@@ -99,10 +99,11 @@ public class Task extends BaseDriver {
         //14-Tick the boxes for Translation Services and Legal Services
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("edit-your-interests-translation")));
         WebElement translationClick = driver.findElement(By.id("edit-your-interests-translation"));
-        MyFunc.jsClick(translationClick);
+        translationClick.click();
         WebElement legalClick = driver.findElement(By.id("edit-your-interests-legal"));
-        MyFunc.jsClick(legalClick);
+        legalClick.click();
         Assert.assertTrue("Button inactive", translationClick.isEnabled());
+        Assert.assertTrue("Button inactive", legalClick.isEnabled());
 
         //15-Enter text into First Name text box
         WebElement firstName = driver.findElement(By.id("edit-first-name"));
@@ -125,9 +126,9 @@ public class Task extends BaseDriver {
 
         //18-Change the website language from English to Italian
         WebElement language = driver.findElement(By.xpath("(//div[@class='content']//button)[11]"));
-        MyFunc.jsClick(language);
+        language.click();
         WebElement languageItalian = driver.findElement(By.xpath("//a[text()='Italiano']"));
-        MyFunc.jsClick(languageItalian);
+        languageItalian.click();
 
         //19-Open the Solutions (Soluzioni) page in a new tab
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.partialLinkText("Soluzioni")));
@@ -148,8 +149,6 @@ public class Task extends BaseDriver {
 
         //21-Close the browser
         driver.quit();
-
-        tearDown();
     }
 }
 
