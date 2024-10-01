@@ -124,6 +124,15 @@ public class Task extends BaseDriver {
         File hafizadakiFile = ts.getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(hafizadakiFile, new File("Img\\" + localDateTime.format(imgFormat) + "screenShot.jpg"));
 
+        File fileInMemory=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        String desktop=System.getProperty("user.home")+"/Desktop";
+
+        try {
+            FileUtils.copyFile(fileInMemory, new File(desktop+"\\screenShot.png"));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
         //18-Change the website language from English to Italian
         WebElement language = driver.findElement(By.xpath("(//div[@class='content']//button)[11]"));
         language.click();
@@ -148,7 +157,7 @@ public class Task extends BaseDriver {
         }
 
         //21-Close the browser
-        driver.quit();
+        driver.close();
     }
 }
 
